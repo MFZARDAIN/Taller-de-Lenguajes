@@ -1,0 +1,74 @@
+%Logica Proposicional ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+conexion(or).
+conexion(and).
+conexion(then).
+const(f).
+const(v).
+vari(p).
+vari(q).
+vari(r).
+vari(s).
+expresion(X) :- const(X).
+expresion(X) :- vari(X).
+expresion([nega, Y]) :- expresion(Y).
+expresion([A, C, B]) :- expresion(A), conexion(C), expresion(B).
+
+%   expresion([[nega, s], or, [p, and, [q, then, [nega, r]]]]).
+
+%Fibonacci ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+fib(0, 0).
+fib(1, 1).
+fib(N, X) :- N > 1, N1 is N-1, fib(N1, X1), N2 is N-2, fib(N2, X2), X is X1+X2.
+
+%   fib(7, X).
+%   fib(15, 610).
+%   fib(15, 615).
+
+%Rutas ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+distancia(merlo, marcospaz, 17).
+distancia(moron, merlo, 12).
+distancia(marcospaz, navarro, 53).
+distancia(marcospaz, ezeiza, 42).
+distancia(ezeiza, cañuelas, 31).
+distancia(navarro, cañuelas, 68).
+
+distanciaTotal(O, D, Km) :- distancia(O, D, Km).
+distanciaTotal(O, D, KmTotal) :- distancia(O, T, KmI), distanciaTotal(T, D, KmF), KmTotal is KmI+KmF.
+
+ruta(O, D, Km) :- distanciaTotal(O, D, Km).
+ruta(D, O, Km) :- distanciaTotal(O, D, Km).
+
+%   ruta(merlo, navarro, Km)
+%   ruta(moron, cañuelas, Km)
+%   ruta(marcospaz, cañuelas, Km)
+
+%Cons(X, Lista1, Lista2) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+cons(X, Lista, [X|Lista]).
+
+%   cons(l, [x, j, z], [l, x, j, z])
+
+% Inversa(Lista1, Lista2) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+inversa([], []).
+inversa([X|Lista1], Lista2) :- inversa(Lista1, Lista3), append(Lista3, X, Lista2).
+
+%   (inversa([x, j, z], [z, j, x])).
+
+%Trabajo
+%Buen sueldo >= 1500000
+
+sueldo(Juan, 1200000).
+sueldo(Carlos, 850000).
+sueldo(Martin, 3000000).
+sueldo(Rosa, 1750000).
+horas(Juan, 7).
+horas(Carlos, 6).
+horas(Martin, 10).
+horas(Rosa, 8).
+buenSueldo(Trabajador):- sueldo(Trabajador, Sueldo), Sueldo > 1500000.
+tiempoLibre(Trabajador):- trabaja(Trabajador, Horas), Horas =< 8.
+buenTrabajo(Trabajador):- buenSueldo(Trabajador), tiempoLibre(Trabajador).
