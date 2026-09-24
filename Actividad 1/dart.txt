@@ -1,0 +1,18 @@
+Lenguaje inicialmente orientado a la Web. Multiparadigma (Objetos, Funcional e Imperativo).
+Nivel de Abstracción: Alto
+Dominio: General/Script (Similar a JavaScript)
+
+
+El lenguaje Dart es seguro en cuanto a tipos; utiliza comprobación de tipos estática para garantizar que el valor de una variable siempre 
+coincida con su tipo estático. A veces, esto se denomina tipado correcto. Si bien los tipos son obligatorios, las anotaciones de tipo son 
+opcionales debido a la inferencia de tipos. El sistema de tipado de Dart también es flexible, permitiendo el uso de un dynamictipo combinado 
+con comprobaciones en tiempo de ejecución, lo cual puede ser útil durante la experimentación o para código que requiere un comportamiento 
+especialmente dinámico.
+
+
+https://dart.dev/
+https://dart.dev/docs
+https://dart.dev/language
+https://dart.dev/overview
+https://en.wikipedia.org/wiki/Dart_(programming_language)
+https://dartpad.dev/
