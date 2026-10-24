@@ -13,6 +13,7 @@ def generar_css(propiedad, valor):
                 Sin texto adicional. 
                 Si es un color adaptalo a HEX.
                 Genera la propiedad {propiedad} y adapta el valor: {valor} al formato del lenguaje CSS.
+                Coloca ';' al final.
                 '''
             }
         ]
