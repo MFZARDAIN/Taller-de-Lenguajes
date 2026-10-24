@@ -19,8 +19,8 @@ def test_caso1():
     actual = css_generado.read_text(encoding="utf-8")
     esperado = '''
                 .div{
-                    color: red;
-                    background-color: black;
+                    color: #FF0000;
+                    background-color: #000000;
                 }
                 '''
     
