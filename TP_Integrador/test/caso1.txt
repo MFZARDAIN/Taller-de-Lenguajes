@@ -1,0 +1,3 @@
+texto (CO:rojo, BK:negro, TA:justificado, FS:20)
+id DV (CO:verde, TA:centrado)
+clase BD (CO:rojo, BK:negro, TA:justificado)
