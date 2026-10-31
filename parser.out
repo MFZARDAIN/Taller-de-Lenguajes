@@ -5,17 +5,17 @@ Grammar
 Rule 0     S' -> sentencias
 Rule 1     sentencias -> sentencias sentencia
 Rule 2     sentencias -> sentencia
-Rule 3     sentencia -> elemento
+Rule 3     sentencia -> selector
 Rule 4     sentencia -> CLASS elemento
 Rule 5     sentencia -> ID elemento
-Rule 6     elemento -> BODY START propiedades END
-Rule 7     elemento -> HEADER START propiedades END
-Rule 8     elemento -> NAV START propiedades END
-Rule 9     elemento -> SECTION START propiedades END
-Rule 10    elemento -> ARTICLE START propiedades END
-Rule 11    elemento -> ASIDE START propiedades END
-Rule 12    elemento -> FOOTER START propiedades END
-Rule 13    elemento -> DIV START propiedades END
+Rule 6     selector -> BODY START propiedades END
+Rule 7     selector -> HEADER START propiedades END
+Rule 8     selector -> NAV START propiedades END
+Rule 9     selector -> SECTION START propiedades END
+Rule 10    selector -> ARTICLE START propiedades END
+Rule 11    selector -> ASIDE START propiedades END
+Rule 12    selector -> FOOTER START propiedades END
+Rule 13    selector -> DIV START propiedades END
 Rule 14    elemento -> TEXT START propiedades END
 Rule 15    propiedades -> propiedad AND propiedades
 Rule 16    propiedades -> propiedad
@@ -77,9 +77,10 @@ error                :
 
 Nonterminals, with rules where they appear
 
-elemento             : 3 4 5
+elemento             : 4 5
 propiedad            : 15 16
 propiedades          : 6 7 8 9 10 11 12 13 14 15
+selector             : 3
 sentencia            : 1 2
 sentencias           : 1 0
 
@@ -89,18 +90,17 @@ state 0
     (0) S' -> . sentencias
     (1) sentencias -> . sentencias sentencia
     (2) sentencias -> . sentencia
-    (3) sentencia -> . elemento
+    (3) sentencia -> . selector
     (4) sentencia -> . CLASS elemento
     (5) sentencia -> . ID elemento
-    (6) elemento -> . BODY START propiedades END
-    (7) elemento -> . HEADER START propiedades END
-    (8) elemento -> . NAV START propiedades END
-    (9) elemento -> . SECTION START propiedades END
-    (10) elemento -> . ARTICLE START propiedades END
-    (11) elemento -> . ASIDE START propiedades END
-    (12) elemento -> . FOOTER START propiedades END
-    (13) elemento -> . DIV START propiedades END
-    (14) elemento -> . TEXT START propiedades END
+    (6) selector -> . BODY START propiedades END
+    (7) selector -> . HEADER START propiedades END
+    (8) selector -> . NAV START propiedades END
+    (9) selector -> . SECTION START propiedades END
+    (10) selector -> . ARTICLE START propiedades END
+    (11) selector -> . ASIDE START propiedades END
+    (12) selector -> . FOOTER START propiedades END
+    (13) selector -> . DIV START propiedades END
 
     CLASS           shift and go to state 4
     ID              shift and go to state 5
@@ -112,28 +112,26 @@ state 0
     ASIDE           shift and go to state 11
     FOOTER          shift and go to state 12
     DIV             shift and go to state 13
-    TEXT            shift and go to state 14
 
     sentencias                     shift and go to state 1
     sentencia                      shift and go to state 2
-    elemento                       shift and go to state 3
+    selector                       shift and go to state 3
 
 state 1
 
     (0) S' -> sentencias .
     (1) sentencias -> sentencias . sentencia
-    (3) sentencia -> . elemento
+    (3) sentencia -> . selector
     (4) sentencia -> . CLASS elemento
     (5) sentencia -> . ID elemento
-    (6) elemento -> . BODY START propiedades END
-    (7) elemento -> . HEADER START propiedades END
-    (8) elemento -> . NAV START propiedades END
-    (9) elemento -> . SECTION START propiedades END
-    (10) elemento -> . ARTICLE START propiedades END
-    (11) elemento -> . ASIDE START propiedades END
-    (12) elemento -> . FOOTER START propiedades END
-    (13) elemento -> . DIV START propiedades END
-    (14) elemento -> . TEXT START propiedades END
+    (6) selector -> . BODY START propiedades END
+    (7) selector -> . HEADER START propiedades END
+    (8) selector -> . NAV START propiedades END
+    (9) selector -> . SECTION START propiedades END
+    (10) selector -> . ARTICLE START propiedades END
+    (11) selector -> . ASIDE START propiedades END
+    (12) selector -> . FOOTER START propiedades END
+    (13) selector -> . DIV START propiedades END
 
     CLASS           shift and go to state 4
     ID              shift and go to state 5
@@ -145,10 +143,9 @@ state 1
     ASIDE           shift and go to state 11
     FOOTER          shift and go to state 12
     DIV             shift and go to state 13
-    TEXT            shift and go to state 14
 
-    sentencia                      shift and go to state 15
-    elemento                       shift and go to state 3
+    sentencia                      shift and go to state 14
+    selector                       shift and go to state 3
 
 state 2
 
@@ -164,142 +161,101 @@ state 2
     ASIDE           reduce using rule 2 (sentencias -> sentencia .)
     FOOTER          reduce using rule 2 (sentencias -> sentencia .)
     DIV             reduce using rule 2 (sentencias -> sentencia .)
-    TEXT            reduce using rule 2 (sentencias -> sentencia .)
     $end            reduce using rule 2 (sentencias -> sentencia .)
 
 
 state 3
 
-    (3) sentencia -> elemento .
+    (3) sentencia -> selector .
 
-    CLASS           reduce using rule 3 (sentencia -> elemento .)
-    ID              reduce using rule 3 (sentencia -> elemento .)
-    BODY            reduce using rule 3 (sentencia -> elemento .)
-    HEADER          reduce using rule 3 (sentencia -> elemento .)
-    NAV             reduce using rule 3 (sentencia -> elemento .)
-    SECTION         reduce using rule 3 (sentencia -> elemento .)
-    ARTICLE         reduce using rule 3 (sentencia -> elemento .)
-    ASIDE           reduce using rule 3 (sentencia -> elemento .)
-    FOOTER          reduce using rule 3 (sentencia -> elemento .)
-    DIV             reduce using rule 3 (sentencia -> elemento .)
-    TEXT            reduce using rule 3 (sentencia -> elemento .)
-    $end            reduce using rule 3 (sentencia -> elemento .)
+    CLASS           reduce using rule 3 (sentencia -> selector .)
+    ID              reduce using rule 3 (sentencia -> selector .)
+    BODY            reduce using rule 3 (sentencia -> selector .)
+    HEADER          reduce using rule 3 (sentencia -> selector .)
+    NAV             reduce using rule 3 (sentencia -> selector .)
+    SECTION         reduce using rule 3 (sentencia -> selector .)
+    ARTICLE         reduce using rule 3 (sentencia -> selector .)
+    ASIDE           reduce using rule 3 (sentencia -> selector .)
+    FOOTER          reduce using rule 3 (sentencia -> selector .)
+    DIV             reduce using rule 3 (sentencia -> selector .)
+    $end            reduce using rule 3 (sentencia -> selector .)
 
 
 state 4
 
     (4) sentencia -> CLASS . elemento
-    (6) elemento -> . BODY START propiedades END
-    (7) elemento -> . HEADER START propiedades END
-    (8) elemento -> . NAV START propiedades END
-    (9) elemento -> . SECTION START propiedades END
-    (10) elemento -> . ARTICLE START propiedades END
-    (11) elemento -> . ASIDE START propiedades END
-    (12) elemento -> . FOOTER START propiedades END
-    (13) elemento -> . DIV START propiedades END
     (14) elemento -> . TEXT START propiedades END
 
-    BODY            shift and go to state 6
-    HEADER          shift and go to state 7
-    NAV             shift and go to state 8
-    SECTION         shift and go to state 9
-    ARTICLE         shift and go to state 10
-    ASIDE           shift and go to state 11
-    FOOTER          shift and go to state 12
-    DIV             shift and go to state 13
-    TEXT            shift and go to state 14
+    TEXT            shift and go to state 16
 
-    elemento                       shift and go to state 16
+    elemento                       shift and go to state 15
 
 state 5
 
     (5) sentencia -> ID . elemento
-    (6) elemento -> . BODY START propiedades END
-    (7) elemento -> . HEADER START propiedades END
-    (8) elemento -> . NAV START propiedades END
-    (9) elemento -> . SECTION START propiedades END
-    (10) elemento -> . ARTICLE START propiedades END
-    (11) elemento -> . ASIDE START propiedades END
-    (12) elemento -> . FOOTER START propiedades END
-    (13) elemento -> . DIV START propiedades END
     (14) elemento -> . TEXT START propiedades END
 
-    BODY            shift and go to state 6
-    HEADER          shift and go to state 7
-    NAV             shift and go to state 8
-    SECTION         shift and go to state 9
-    ARTICLE         shift and go to state 10
-    ASIDE           shift and go to state 11
-    FOOTER          shift and go to state 12
-    DIV             shift and go to state 13
-    TEXT            shift and go to state 14
+    TEXT            shift and go to state 16
 
     elemento                       shift and go to state 17
 
 state 6
 
-    (6) elemento -> BODY . START propiedades END
+    (6) selector -> BODY . START propiedades END
 
     START           shift and go to state 18
 
 
 state 7
 
-    (7) elemento -> HEADER . START propiedades END
+    (7) selector -> HEADER . START propiedades END
 
     START           shift and go to state 19
 
 
 state 8
 
-    (8) elemento -> NAV . START propiedades END
+    (8) selector -> NAV . START propiedades END
 
     START           shift and go to state 20
 
 
 state 9
 
-    (9) elemento -> SECTION . START propiedades END
+    (9) selector -> SECTION . START propiedades END
 
     START           shift and go to state 21
 
 
 state 10
 
-    (10) elemento -> ARTICLE . START propiedades END
+    (10) selector -> ARTICLE . START propiedades END
 
     START           shift and go to state 22
 
 
 state 11
 
-    (11) elemento -> ASIDE . START propiedades END
+    (11) selector -> ASIDE . START propiedades END
 
     START           shift and go to state 23
 
 
 state 12
 
-    (12) elemento -> FOOTER . START propiedades END
+    (12) selector -> FOOTER . START propiedades END
 
     START           shift and go to state 24
 
 
 state 13
 
-    (13) elemento -> DIV . START propiedades END
+    (13) selector -> DIV . START propiedades END
 
     START           shift and go to state 25
 
 
 state 14
-
-    (14) elemento -> TEXT . START propiedades END
-
-    START           shift and go to state 26
-
-
-state 15
 
     (1) sentencias -> sentencias sentencia .
 
@@ -313,11 +269,10 @@ state 15
     ASIDE           reduce using rule 1 (sentencias -> sentencias sentencia .)
     FOOTER          reduce using rule 1 (sentencias -> sentencias sentencia .)
     DIV             reduce using rule 1 (sentencias -> sentencias sentencia .)
-    TEXT            reduce using rule 1 (sentencias -> sentencias sentencia .)
     $end            reduce using rule 1 (sentencias -> sentencias sentencia .)
 
 
-state 16
+state 15
 
     (4) sentencia -> CLASS elemento .
 
@@ -331,8 +286,14 @@ state 16
     ASIDE           reduce using rule 4 (sentencia -> CLASS elemento .)
     FOOTER          reduce using rule 4 (sentencia -> CLASS elemento .)
     DIV             reduce using rule 4 (sentencia -> CLASS elemento .)
-    TEXT            reduce using rule 4 (sentencia -> CLASS elemento .)
     $end            reduce using rule 4 (sentencia -> CLASS elemento .)
+
+
+state 16
+
+    (14) elemento -> TEXT . START propiedades END
+
+    START           shift and go to state 26
 
 
 state 17
@@ -349,13 +310,12 @@ state 17
     ASIDE           reduce using rule 5 (sentencia -> ID elemento .)
     FOOTER          reduce using rule 5 (sentencia -> ID elemento .)
     DIV             reduce using rule 5 (sentencia -> ID elemento .)
-    TEXT            reduce using rule 5 (sentencia -> ID elemento .)
     $end            reduce using rule 5 (sentencia -> ID elemento .)
 
 
 state 18
 
-    (6) elemento -> BODY START . propiedades END
+    (6) selector -> BODY START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -390,7 +350,7 @@ state 18
 
 state 19
 
-    (7) elemento -> HEADER START . propiedades END
+    (7) selector -> HEADER START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -425,7 +385,7 @@ state 19
 
 state 20
 
-    (8) elemento -> NAV START . propiedades END
+    (8) selector -> NAV START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -460,7 +420,7 @@ state 20
 
 state 21
 
-    (9) elemento -> SECTION START . propiedades END
+    (9) selector -> SECTION START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -495,7 +455,7 @@ state 21
 
 state 22
 
-    (10) elemento -> ARTICLE START . propiedades END
+    (10) selector -> ARTICLE START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -530,7 +490,7 @@ state 22
 
 state 23
 
-    (11) elemento -> ASIDE START . propiedades END
+    (11) selector -> ASIDE START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -565,7 +525,7 @@ state 23
 
 state 24
 
-    (12) elemento -> FOOTER START . propiedades END
+    (12) selector -> FOOTER START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -600,7 +560,7 @@ state 24
 
 state 25
 
-    (13) elemento -> DIV START . propiedades END
+    (13) selector -> DIV START . propiedades END
     (15) propiedades -> . propiedad AND propiedades
     (16) propiedades -> . propiedad
     (17) propiedad -> . COLOR EQUALS RED
@@ -670,7 +630,7 @@ state 26
 
 state 27
 
-    (6) elemento -> BODY START propiedades . END
+    (6) selector -> BODY START propiedades . END
 
     END             shift and go to state 43
 
@@ -741,49 +701,49 @@ state 34
 
 state 35
 
-    (7) elemento -> HEADER START propiedades . END
+    (7) selector -> HEADER START propiedades . END
 
     END             shift and go to state 51
 
 
 state 36
 
-    (8) elemento -> NAV START propiedades . END
+    (8) selector -> NAV START propiedades . END
 
     END             shift and go to state 52
 
 
 state 37
 
-    (9) elemento -> SECTION START propiedades . END
+    (9) selector -> SECTION START propiedades . END
 
     END             shift and go to state 53
 
 
 state 38
 
-    (10) elemento -> ARTICLE START propiedades . END
+    (10) selector -> ARTICLE START propiedades . END
 
     END             shift and go to state 54
 
 
 state 39
 
-    (11) elemento -> ASIDE START propiedades . END
+    (11) selector -> ASIDE START propiedades . END
 
     END             shift and go to state 55
 
 
 state 40
 
-    (12) elemento -> FOOTER START propiedades . END
+    (12) selector -> FOOTER START propiedades . END
 
     END             shift and go to state 56
 
 
 state 41
 
-    (13) elemento -> DIV START propiedades . END
+    (13) selector -> DIV START propiedades . END
 
     END             shift and go to state 57
 
@@ -797,20 +757,19 @@ state 42
 
 state 43
 
-    (6) elemento -> BODY START propiedades END .
+    (6) selector -> BODY START propiedades END .
 
-    CLASS           reduce using rule 6 (elemento -> BODY START propiedades END .)
-    ID              reduce using rule 6 (elemento -> BODY START propiedades END .)
-    BODY            reduce using rule 6 (elemento -> BODY START propiedades END .)
-    HEADER          reduce using rule 6 (elemento -> BODY START propiedades END .)
-    NAV             reduce using rule 6 (elemento -> BODY START propiedades END .)
-    SECTION         reduce using rule 6 (elemento -> BODY START propiedades END .)
-    ARTICLE         reduce using rule 6 (elemento -> BODY START propiedades END .)
-    ASIDE           reduce using rule 6 (elemento -> BODY START propiedades END .)
-    FOOTER          reduce using rule 6 (elemento -> BODY START propiedades END .)
-    DIV             reduce using rule 6 (elemento -> BODY START propiedades END .)
-    TEXT            reduce using rule 6 (elemento -> BODY START propiedades END .)
-    $end            reduce using rule 6 (elemento -> BODY START propiedades END .)
+    CLASS           reduce using rule 6 (selector -> BODY START propiedades END .)
+    ID              reduce using rule 6 (selector -> BODY START propiedades END .)
+    BODY            reduce using rule 6 (selector -> BODY START propiedades END .)
+    HEADER          reduce using rule 6 (selector -> BODY START propiedades END .)
+    NAV             reduce using rule 6 (selector -> BODY START propiedades END .)
+    SECTION         reduce using rule 6 (selector -> BODY START propiedades END .)
+    ARTICLE         reduce using rule 6 (selector -> BODY START propiedades END .)
+    ASIDE           reduce using rule 6 (selector -> BODY START propiedades END .)
+    FOOTER          reduce using rule 6 (selector -> BODY START propiedades END .)
+    DIV             reduce using rule 6 (selector -> BODY START propiedades END .)
+    $end            reduce using rule 6 (selector -> BODY START propiedades END .)
 
 
 state 44
@@ -918,128 +877,121 @@ state 50
 
 state 51
 
-    (7) elemento -> HEADER START propiedades END .
+    (7) selector -> HEADER START propiedades END .
 
-    CLASS           reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    ID              reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    BODY            reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    HEADER          reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    NAV             reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    SECTION         reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    ARTICLE         reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    ASIDE           reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    FOOTER          reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    DIV             reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    TEXT            reduce using rule 7 (elemento -> HEADER START propiedades END .)
-    $end            reduce using rule 7 (elemento -> HEADER START propiedades END .)
+    CLASS           reduce using rule 7 (selector -> HEADER START propiedades END .)
+    ID              reduce using rule 7 (selector -> HEADER START propiedades END .)
+    BODY            reduce using rule 7 (selector -> HEADER START propiedades END .)
+    HEADER          reduce using rule 7 (selector -> HEADER START propiedades END .)
+    NAV             reduce using rule 7 (selector -> HEADER START propiedades END .)
+    SECTION         reduce using rule 7 (selector -> HEADER START propiedades END .)
+    ARTICLE         reduce using rule 7 (selector -> HEADER START propiedades END .)
+    ASIDE           reduce using rule 7 (selector -> HEADER START propiedades END .)
+    FOOTER          reduce using rule 7 (selector -> HEADER START propiedades END .)
+    DIV             reduce using rule 7 (selector -> HEADER START propiedades END .)
+    $end            reduce using rule 7 (selector -> HEADER START propiedades END .)
 
 
 state 52
 
-    (8) elemento -> NAV START propiedades END .
+    (8) selector -> NAV START propiedades END .
 
-    CLASS           reduce using rule 8 (elemento -> NAV START propiedades END .)
-    ID              reduce using rule 8 (elemento -> NAV START propiedades END .)
-    BODY            reduce using rule 8 (elemento -> NAV START propiedades END .)
-    HEADER          reduce using rule 8 (elemento -> NAV START propiedades END .)
-    NAV             reduce using rule 8 (elemento -> NAV START propiedades END .)
-    SECTION         reduce using rule 8 (elemento -> NAV START propiedades END .)
-    ARTICLE         reduce using rule 8 (elemento -> NAV START propiedades END .)
-    ASIDE           reduce using rule 8 (elemento -> NAV START propiedades END .)
-    FOOTER          reduce using rule 8 (elemento -> NAV START propiedades END .)
-    DIV             reduce using rule 8 (elemento -> NAV START propiedades END .)
-    TEXT            reduce using rule 8 (elemento -> NAV START propiedades END .)
-    $end            reduce using rule 8 (elemento -> NAV START propiedades END .)
+    CLASS           reduce using rule 8 (selector -> NAV START propiedades END .)
+    ID              reduce using rule 8 (selector -> NAV START propiedades END .)
+    BODY            reduce using rule 8 (selector -> NAV START propiedades END .)
+    HEADER          reduce using rule 8 (selector -> NAV START propiedades END .)
+    NAV             reduce using rule 8 (selector -> NAV START propiedades END .)
+    SECTION         reduce using rule 8 (selector -> NAV START propiedades END .)
+    ARTICLE         reduce using rule 8 (selector -> NAV START propiedades END .)
+    ASIDE           reduce using rule 8 (selector -> NAV START propiedades END .)
+    FOOTER          reduce using rule 8 (selector -> NAV START propiedades END .)
+    DIV             reduce using rule 8 (selector -> NAV START propiedades END .)
+    $end            reduce using rule 8 (selector -> NAV START propiedades END .)
 
 
 state 53
 
-    (9) elemento -> SECTION START propiedades END .
+    (9) selector -> SECTION START propiedades END .
 
-    CLASS           reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    ID              reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    BODY            reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    HEADER          reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    NAV             reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    SECTION         reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    ARTICLE         reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    ASIDE           reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    FOOTER          reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    DIV             reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    TEXT            reduce using rule 9 (elemento -> SECTION START propiedades END .)
-    $end            reduce using rule 9 (elemento -> SECTION START propiedades END .)
+    CLASS           reduce using rule 9 (selector -> SECTION START propiedades END .)
+    ID              reduce using rule 9 (selector -> SECTION START propiedades END .)
+    BODY            reduce using rule 9 (selector -> SECTION START propiedades END .)
+    HEADER          reduce using rule 9 (selector -> SECTION START propiedades END .)
+    NAV             reduce using rule 9 (selector -> SECTION START propiedades END .)
+    SECTION         reduce using rule 9 (selector -> SECTION START propiedades END .)
+    ARTICLE         reduce using rule 9 (selector -> SECTION START propiedades END .)
+    ASIDE           reduce using rule 9 (selector -> SECTION START propiedades END .)
+    FOOTER          reduce using rule 9 (selector -> SECTION START propiedades END .)
+    DIV             reduce using rule 9 (selector -> SECTION START propiedades END .)
+    $end            reduce using rule 9 (selector -> SECTION START propiedades END .)
 
 
 state 54
 
-    (10) elemento -> ARTICLE START propiedades END .
+    (10) selector -> ARTICLE START propiedades END .
 
-    CLASS           reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    ID              reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    BODY            reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    HEADER          reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    NAV             reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    SECTION         reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    ARTICLE         reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    ASIDE           reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    FOOTER          reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    DIV             reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    TEXT            reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
-    $end            reduce using rule 10 (elemento -> ARTICLE START propiedades END .)
+    CLASS           reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    ID              reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    BODY            reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    HEADER          reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    NAV             reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    SECTION         reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    ARTICLE         reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    ASIDE           reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    FOOTER          reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    DIV             reduce using rule 10 (selector -> ARTICLE START propiedades END .)
+    $end            reduce using rule 10 (selector -> ARTICLE START propiedades END .)
 
 
 state 55
 
-    (11) elemento -> ASIDE START propiedades END .
+    (11) selector -> ASIDE START propiedades END .
 
-    CLASS           reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    ID              reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    BODY            reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    HEADER          reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    NAV             reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    SECTION         reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    ARTICLE         reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    ASIDE           reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    FOOTER          reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    DIV             reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    TEXT            reduce using rule 11 (elemento -> ASIDE START propiedades END .)
-    $end            reduce using rule 11 (elemento -> ASIDE START propiedades END .)
+    CLASS           reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    ID              reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    BODY            reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    HEADER          reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    NAV             reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    SECTION         reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    ARTICLE         reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    ASIDE           reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    FOOTER          reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    DIV             reduce using rule 11 (selector -> ASIDE START propiedades END .)
+    $end            reduce using rule 11 (selector -> ASIDE START propiedades END .)
 
 
 state 56
 
-    (12) elemento -> FOOTER START propiedades END .
+    (12) selector -> FOOTER START propiedades END .
 
-    CLASS           reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    ID              reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    BODY            reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    HEADER          reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    NAV             reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    SECTION         reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    ARTICLE         reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    ASIDE           reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    FOOTER          reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    DIV             reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    TEXT            reduce using rule 12 (elemento -> FOOTER START propiedades END .)
-    $end            reduce using rule 12 (elemento -> FOOTER START propiedades END .)
+    CLASS           reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    ID              reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    BODY            reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    HEADER          reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    NAV             reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    SECTION         reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    ARTICLE         reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    ASIDE           reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    FOOTER          reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    DIV             reduce using rule 12 (selector -> FOOTER START propiedades END .)
+    $end            reduce using rule 12 (selector -> FOOTER START propiedades END .)
 
 
 state 57
 
-    (13) elemento -> DIV START propiedades END .
+    (13) selector -> DIV START propiedades END .
 
-    CLASS           reduce using rule 13 (elemento -> DIV START propiedades END .)
-    ID              reduce using rule 13 (elemento -> DIV START propiedades END .)
-    BODY            reduce using rule 13 (elemento -> DIV START propiedades END .)
-    HEADER          reduce using rule 13 (elemento -> DIV START propiedades END .)
-    NAV             reduce using rule 13 (elemento -> DIV START propiedades END .)
-    SECTION         reduce using rule 13 (elemento -> DIV START propiedades END .)
-    ARTICLE         reduce using rule 13 (elemento -> DIV START propiedades END .)
-    ASIDE           reduce using rule 13 (elemento -> DIV START propiedades END .)
-    FOOTER          reduce using rule 13 (elemento -> DIV START propiedades END .)
-    DIV             reduce using rule 13 (elemento -> DIV START propiedades END .)
-    TEXT            reduce using rule 13 (elemento -> DIV START propiedades END .)
-    $end            reduce using rule 13 (elemento -> DIV START propiedades END .)
+    CLASS           reduce using rule 13 (selector -> DIV START propiedades END .)
+    ID              reduce using rule 13 (selector -> DIV START propiedades END .)
+    BODY            reduce using rule 13 (selector -> DIV START propiedades END .)
+    HEADER          reduce using rule 13 (selector -> DIV START propiedades END .)
+    NAV             reduce using rule 13 (selector -> DIV START propiedades END .)
+    SECTION         reduce using rule 13 (selector -> DIV START propiedades END .)
+    ARTICLE         reduce using rule 13 (selector -> DIV START propiedades END .)
+    ASIDE           reduce using rule 13 (selector -> DIV START propiedades END .)
+    FOOTER          reduce using rule 13 (selector -> DIV START propiedades END .)
+    DIV             reduce using rule 13 (selector -> DIV START propiedades END .)
+    $end            reduce using rule 13 (selector -> DIV START propiedades END .)
 
 
 state 58
@@ -1056,7 +1008,6 @@ state 58
     ASIDE           reduce using rule 14 (elemento -> TEXT START propiedades END .)
     FOOTER          reduce using rule 14 (elemento -> TEXT START propiedades END .)
     DIV             reduce using rule 14 (elemento -> TEXT START propiedades END .)
-    TEXT            reduce using rule 14 (elemento -> TEXT START propiedades END .)
     $end            reduce using rule 14 (elemento -> TEXT START propiedades END .)
 
 

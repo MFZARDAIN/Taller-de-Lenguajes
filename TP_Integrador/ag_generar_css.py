@@ -11,8 +11,9 @@ def generar_css(propiedad, valor):
                 Sin explicaciones. 
                 Sin markdown. 
                 Sin texto adicional. 
+                Si es un valor númerico agregale la unidad de medida correspondiente a la propiedad.
                 Si es un color adaptalo a HEX.
-                Genera la propiedad {propiedad} y adapta el valor: {valor} al formato del lenguaje CSS.
+                Adapta al formato del lenguaje CSS la propiedad {propiedad} y el valor: {valor}.
                 Coloca ';' al final.
                 '''
             }

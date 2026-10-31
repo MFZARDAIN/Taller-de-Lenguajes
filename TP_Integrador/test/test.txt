@@ -1,0 +1,3 @@
+DV (CO:rojo, BK:negro)
+id Hola (PD:25)
+NV (MG:10, TA:justificado)

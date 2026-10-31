@@ -18,7 +18,7 @@ def p_lista_sentencias(t):
 
 def p_sentencia(t):
     '''
-    sentencia   :   elemento
+    sentencia   :   selector
                 |   CLASS elemento
                 |   ID elemento
     '''
@@ -32,7 +32,7 @@ def p_sentencia(t):
 
 def p_elemento_selector(t):
     '''
-    elemento    :   BODY START propiedades END
+    selector    :   BODY START propiedades END
                 |   HEADER START propiedades END
                 |   NAV START propiedades END
                 |   SECTION START propiedades END
@@ -46,13 +46,12 @@ def p_elemento_selector(t):
         'AR': 'article', 'AS': 'aside', 'FT': 'footer', 'DV': 'div'
     }
     
-    selector_real = selectores.get(t[1], t[1].lower())
-    t[0] = f"{selector_real}{{\n{t[3]}\n}}"
+    cod = selectores.get(t[1], t[1].lower())
+    t[0] = f"{cod}{{\n{t[3]}\n}}"
 
 def p_elemento_texto(t):
     'elemento   :   TEXT START propiedades END'
     t[0] = f"{t[1]}{{\n{t[3]}\n}}"
-
 
 def p_propiedades(t):
     '''
@@ -74,7 +73,7 @@ def p_propiedad_color(t):
                 |   COLOR EQUALS WHITE
                 |   COLOR EQUALS BLACK
     '''
-    cod = generar_css('color', t[3])
+    cod = generar_css('color', t[3]).lower()
     t[0] = f"\t{cod.strip()}"
     pass
 
@@ -87,7 +86,7 @@ def p_propiedad_fondo(t):
                 |   BACKGROUND_COLOR EQUALS WHITE
                 |   BACKGROUND_COLOR EQUALS BLACK
     '''
-    cod = generar_css('background-color', t[3])
+    cod = generar_css('background-color', t[3]).lower()
     t[0] = f"\t{cod.strip()}"
     pass
 
@@ -122,5 +121,6 @@ def p_propiedad_tamaño_texto(t):
 
 def p_error(t):
     css.append('Error Sintáctico')
+    pass
 
-parser = yacc.yacc(debug=1)
+parser = yacc.yacc()

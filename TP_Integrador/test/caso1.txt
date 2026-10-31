@@ -1,1 +1,1 @@
-clase DV (CO:rojo, BK:negro)
+DV (CO:rojo, BK:negro)
