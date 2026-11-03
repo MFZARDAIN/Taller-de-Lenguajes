@@ -41,7 +41,6 @@ keywords = {
     'arriba': 'OVERLINE',
     'abajo': 'UNDERLINE',
     'centro': 'LINE_THROUGH',
-    'cobertura': 'UNDERLINE_OVERLINE',
     'simple': 'SOLID',
     'doble': 'DOUBLE',
     'puntos': 'DOTTED',

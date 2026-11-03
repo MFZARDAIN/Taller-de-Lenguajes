@@ -149,7 +149,6 @@ def p_propiedad_decorador(t):
     propiedad   :   TEXT_DECORATION EQUALS OVERLINE
                 |   TEXT_DECORATION EQUALS UNDERLINE
                 |   TEXT_DECORATION EQUALS LINE_THROUGH
-                |   TEXT_DECORATION EQUALS UNDERLINE_OVERLINE
     '''
     cod = generar_css('text-decoration', t[3])
     t[0] = f"\t{cod.strip()}"
