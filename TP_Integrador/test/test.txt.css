@@ -1,5 +1,5 @@
 div{
-	color: #ff0000;
+	color: #808080;
 	background-color: #000000;
 }
 #Hola{
@@ -8,4 +8,9 @@ div{
 nav{
 	margin: 10px;
 	text-align: justify;
+}
+.Contenedor{
+	text-decoration: underline;
+	text-decoration-color: #87ceeb;
+	text-decoration-style: wavy;
 }

@@ -64,14 +64,20 @@ def p_propiedades(t):
         t[0] = t[1]
     pass
 
-def p_propiedad_color(t):
+def p_propiedad_color_texto(t):
     '''
     propiedad   :   COLOR EQUALS RED
                 |   COLOR EQUALS BLUE
-                |   COLOR EQUALS GREEN
                 |   COLOR EQUALS YELLOW
+                |   COLOR EQUALS GREEN
+                |   COLOR EQUALS LIME
+                |   COLOR EQUALS ORANGE
+                |   COLOR EQUALS SKYBLUE
+                |   COLOR EQUALS PURPLE
+                |   COLOR EQUALS DARKVIOLET
                 |   COLOR EQUALS WHITE
                 |   COLOR EQUALS BLACK
+                |   COLOR EQUALS GRAY
     '''
     cod = generar_css('color', t[3]).lower()
     t[0] = f"\t{cod.strip()}"
@@ -81,12 +87,49 @@ def p_propiedad_fondo(t):
     '''
     propiedad   :   BACKGROUND_COLOR EQUALS RED
                 |   BACKGROUND_COLOR EQUALS BLUE
-                |   BACKGROUND_COLOR EQUALS GREEN
                 |   BACKGROUND_COLOR EQUALS YELLOW
+                |   BACKGROUND_COLOR EQUALS GREEN
+                |   BACKGROUND_COLOR EQUALS LIME
+                |   BACKGROUND_COLOR EQUALS ORANGE
+                |   BACKGROUND_COLOR EQUALS PURPLE
+                |   BACKGROUND_COLOR EQUALS DARKVIOLET
+                |   BACKGROUND_COLOR EQUALS SKYBLUE
                 |   BACKGROUND_COLOR EQUALS WHITE
                 |   BACKGROUND_COLOR EQUALS BLACK
+                |   BACKGROUND_COLOR EQUALS GRAY
     '''
     cod = generar_css('background-color', t[3]).lower()
+    t[0] = f"\t{cod.strip()}"
+    pass
+
+def p_propiedad_estilo_borde(t):
+    '''
+    propiedad   :   BORDER_STYLE EQUALS SOLID
+                |   BORDER_STYLE EQUALS DOUBLE
+                |   BORDER_STYLE EQUALS DOTTED
+                |   BORDER_STYLE EQUALS DASHED
+                |   BORDER_STYLE EQUALS WAVY
+    '''
+    cod = generar_css('border-style', t[3]).lower()
+    t[0] = f"\t{cod.strip()}"
+    pass
+
+def p_propiedad_color_borde(t):
+    '''
+    propiedad   :   BORDER_COLOR EQUALS RED
+                |   BORDER_COLOR EQUALS BLUE
+                |   BORDER_COLOR EQUALS YELLOW
+                |   BORDER_COLOR EQUALS GREEN
+                |   BORDER_COLOR EQUALS LIME
+                |   BORDER_COLOR EQUALS ORANGE
+                |   BORDER_COLOR EQUALS SKYBLUE
+                |   BORDER_COLOR EQUALS PURPLE
+                |   BORDER_COLOR EQUALS DARKVIOLET
+                |   BORDER_COLOR EQUALS WHITE
+                |   BORDER_COLOR EQUALS BLACK
+                |   BORDER_COLOR EQUALS GRAY
+    '''
+    cod = generar_css('border-color', t[3]).lower()
     t[0] = f"\t{cod.strip()}"
     pass
 
@@ -98,6 +141,48 @@ def p_propiedad_alineacion(t):
                 |   TEXT_ALIGNMENT EQUALS JUSTIFY
     '''
     cod = generar_css('text-alignment', t[3])
+    t[0] = f"\t{cod.strip()}"
+    pass
+
+def p_propiedad_decorador(t):
+    '''
+    propiedad   :   TEXT_DECORATION EQUALS OVERLINE
+                |   TEXT_DECORATION EQUALS UNDERLINE
+                |   TEXT_DECORATION EQUALS LINE_THROUGH
+                |   TEXT_DECORATION EQUALS UNDERLINE_OVERLINE
+    '''
+    cod = generar_css('text-decoration', t[3])
+    t[0] = f"\t{cod.strip()}"
+    pass
+
+def p_propiedad_estilo_decorador(t):
+    '''
+    propiedad   :   TEXT_DECORATION_STYLE EQUALS SOLID
+                |   TEXT_DECORATION_STYLE EQUALS DOUBLE
+                |   TEXT_DECORATION_STYLE EQUALS DOTTED
+                |   TEXT_DECORATION_STYLE EQUALS DASHED
+                |   TEXT_DECORATION_STYLE EQUALS WAVY
+    '''
+    cod = generar_css('text-decoration-style', t[3]).lower()
+    t[0] = f"\t{cod.strip()}"
+    pass
+
+def p_propiedad_color_decorador(t):
+    '''
+    propiedad   :   TEXT_DECORATION_COLOR EQUALS RED
+                |   TEXT_DECORATION_COLOR EQUALS BLUE
+                |   TEXT_DECORATION_COLOR EQUALS YELLOW
+                |   TEXT_DECORATION_COLOR EQUALS GREEN
+                |   TEXT_DECORATION_COLOR EQUALS LIME
+                |   TEXT_DECORATION_COLOR EQUALS ORANGE
+                |   TEXT_DECORATION_COLOR EQUALS SKYBLUE
+                |   TEXT_DECORATION_COLOR EQUALS PURPLE
+                |   TEXT_DECORATION_COLOR EQUALS DARKVIOLET
+                |   TEXT_DECORATION_COLOR EQUALS WHITE
+                |   TEXT_DECORATION_COLOR EQUALS BLACK
+                |   TEXT_DECORATION_COLOR EQUALS GRAY
+    '''
+    cod = generar_css('text-decoration-color', t[3]).lower()
     t[0] = f"\t{cod.strip()}"
     pass
 

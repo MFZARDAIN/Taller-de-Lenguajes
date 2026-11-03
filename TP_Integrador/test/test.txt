@@ -1,3 +1,4 @@
-DV (CO:rojo, BK:negro)
+DV (CO:gris, BK:negro)
 id Hola (PD:25)
 NV (MG:10, TA:justificado)
+clase Contenedor (TD:cobertura, TDC:celeste, TDS:ondas)
