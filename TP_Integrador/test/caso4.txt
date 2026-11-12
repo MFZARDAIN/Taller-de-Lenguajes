@@ -1,2 +1,2 @@
-DV (TDS:simple, TDS:doble, TDS:puntos, TDS:lineas, TDS:ondas)
-DV (BS:simple, BS:doble, BS:puntos, BS:lineas, BS:ondas)
+DV (TDS:solido, TDS:doble, TDS:punteado, TDS:trazas, TDS:ondulado)
+DV (BS:solido, BS:doble, BS:punteado, BS:trazas)

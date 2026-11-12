@@ -3,6 +3,10 @@ import ollama
 def generar_css(propiedad, valor):
     respuesta = ollama.chat(
         model='llama3.2',
+        options={
+            'temperature': 0.0,
+            'top_p': 0.1
+        },
         messages=[
             {
                 'role': 'user',
@@ -13,7 +17,7 @@ def generar_css(propiedad, valor):
                 Sin texto adicional. 
                 Si es un valor númerico agregale la unidad de medida correspondiente a la propiedad.
                 Si es un color adaptalo a HEX.
-                Adapta al formato del lenguaje CSS la propiedad "{propiedad}" y el valor: "{valor}".
+                Adapta al formato del lenguaje CSS la propiedad {propiedad} y el valor: {valor}.
                 Coloca ';' al final.
                 '''
             }

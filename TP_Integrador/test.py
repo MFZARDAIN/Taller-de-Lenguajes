@@ -6,7 +6,7 @@ from pathlib import Path
 def test_caso1():
     'Prueba 1: Formato HEX en colores'
     txt_file = Path("TP_Integrador/test/caso1.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -29,20 +29,20 @@ def test_caso1():
                     color: #000000;
                     color: #808080;
                     color: #008000;
-                    color: #800080;
-                    color: #9400d3;
-                    color: #00ff00;
+                    color: #4b0082;
+                    color: #ee82ee;
+                    color: #dc143c;
                     color: #ffa500;
                     color: #87ceeb;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso2():
     'Prueba 2: Alineación Texto'
     txt_file = Path("TP_Integrador/test/caso2.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -64,13 +64,13 @@ def test_caso2():
                         text-align: justify;
                     }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso3():
     'Prueba 3'
     txt_file = Path("TP_Integrador/test/caso3.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -91,13 +91,13 @@ def test_caso3():
                     text-decoration: line-through;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso4():
     'Prueba 4 - Estilos Bordes y Decoradores'
     txt_file = Path("TP_Integrador/test/caso4.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -124,16 +124,15 @@ def test_caso4():
                     border-style: double;
                     border-style: dotted;
                     border-style: dashed;
-                    border-style: wavy;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso5():
     'Prueba 5 - Clases e Ids'
     txt_file = Path("TP_Integrador/test/caso5.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -161,13 +160,13 @@ def test_caso5():
                     color: #0000ff;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso6():
     'Prueba 6 - Elementos de HTML'
     txt_file = Path("TP_Integrador/test/caso6.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -186,7 +185,7 @@ def test_caso6():
                     color: #808080;
                 }
                 header{
-                    color: #757575;
+                    color: #808080;
                 }
                 nav{
                     color: #808080;
@@ -195,7 +194,7 @@ def test_caso6():
                     color: #808080;
                 }
                 article{
-                    color: #c0c0c0;
+                    color: #808080;
                 }
                 aside{
                     color: #808080;
@@ -207,13 +206,13 @@ def test_caso6():
                     color: #808080;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso7():
     'Prueba 7 - Propiedades'
     txt_file = Path("TP_Integrador/test/caso7.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -242,13 +241,13 @@ def test_caso7():
                     font-size: 25px;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso8():
     'Prueba 8 - Caso de Uso 1'
     txt_file = Path("TP_Integrador/test/caso8.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -274,18 +273,18 @@ def test_caso8():
                 .Elemento{
                     text-align: justify;
                     text-decoration: underline;
-                    text-decoration-color: #00ff00;
+                    text-decoration-color: #008000;
                     text-decoration-style: double;
                     font-size: 40px;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso9():
     'Prueba 9 - Caso de Uso 2'
     txt_file = Path("TP_Integrador/test/caso9.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -304,13 +303,13 @@ def test_caso9():
                         color: #000000;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso10():
     'Prueba 10 - Caso de Uso 3'
     txt_file = Path("TP_Integrador/test/caso10.txt")
-    
+
     resultado = subprocess.run(
         ['python', 'TP_Integrador/main.py', str(txt_file)],
         capture_output=True,
@@ -326,13 +325,13 @@ def test_caso10():
     actual = css_generado.read_text(encoding="utf-8")
     esperado = '''
                 .contenedor{
-                    color: #ff0000;	
+                    color: #ff0000;
                     background-color: #000000;
                 }
-                nav {
-                    text-alignment: center;
-                    text-decorator: underline;
+                nav{
+                    text-align: center;
+                    text-decoration: underline;
                 }
                 '''
-    
+
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')

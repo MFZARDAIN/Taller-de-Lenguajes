@@ -15,7 +15,7 @@ keywords = {
     'BK': 'BACKGROUND_COLOR',
     'BS': 'BORDER_STYLE',
     'BC': 'BORDER_COLOR',
-    'TA': 'TEXT_ALIGNMENT',
+    'TA': 'TEXT_ALIGN',
     'TD': 'TEXT_DECORATION',
     'TDC': 'TEXT_DECORATION_COLOR',
     'TDS': 'TEXT_DECORATION_STYLE',
@@ -26,14 +26,14 @@ keywords = {
     'azul': 'BLUE',
     'amarillo': 'YELLOW',
     'verde': 'GREEN',
-    'lima': 'LIME',
+    'carmesi': 'CRIMSON',
     'naranja': 'ORANGE',
-    'violeta': 'DARKVIOLET',
-    'purpura': 'PURPLE',
+    'violeta': 'VIOLET',
+    'indigo': 'INDIGO',
     'celeste': 'SKYBLUE',
     'blanco': 'WHITE',
     'negro': 'BLACK',
-    'gris': 'GRAY',
+    'gris': 'GREY',
     'izquierda': 'LEFT',
     'centrado': 'CENTER',
     'derecha': 'RIGHT',
@@ -41,11 +41,11 @@ keywords = {
     'arriba': 'OVERLINE',
     'abajo': 'UNDERLINE',
     'tachado': 'LINE_THROUGH',
-    'simple': 'SOLID',
+    'solido': 'SOLID',
     'doble': 'DOUBLE',
-    'puntos': 'DOTTED',
-    'lineas': 'DASHED',
-    'ondas': 'WAVY'
+    'punteado': 'DOTTED',
+    'trazas': 'DASHED',
+    'ondulado': 'WAVY'
 }
 
 tokens = (
