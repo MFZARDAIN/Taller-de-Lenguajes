@@ -1,0 +1,1 @@
+DV (CO:rojo, BK:blanco, BC:rojo, BS:doble, TA:justificado, TD:abajo, TDC:verde, TDS:doble, PD:15, MG:15, FS:25)

@@ -1,0 +1,15 @@
+#Contenedor{
+	color: #ff0000;
+	background-color: #ffffff;
+	border-color: #ff0000;
+	border-style: double;
+	padding: 10px;
+	margin: 10px;
+}
+.Elemento{
+	text-align: justify;
+	text-decoration: underline;
+	text-decoration-color: #00ff00;
+	text-decoration-style: double;
+	font-size: 40px;
+}

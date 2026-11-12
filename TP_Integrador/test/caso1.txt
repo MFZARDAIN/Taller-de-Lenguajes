@@ -1,1 +1,1 @@
-DV (CO:rojo, BK:negro)
+DV (CO:rojo, CO:azul, CO:amarillo, CO:blanco, CO:negro, CO:gris, CO:verde, CO:purpura, CO:violeta, CO:lima, CO:naranja, CO:celeste)

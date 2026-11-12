@@ -1,0 +1,14 @@
+div{
+	text-decoration-style: solid;
+	text-decoration-style: double;
+	text-decoration-style: dotted;
+	text-decoration-style: dashed;
+	text-decoration-style: wavy;
+}
+div{
+	border-style: solid;
+	border-style: double;
+	border-style: dotted;
+	border-style: dashed;
+	border-style: wavy;
+}

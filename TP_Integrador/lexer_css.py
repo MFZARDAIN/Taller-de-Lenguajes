@@ -40,7 +40,7 @@ keywords = {
     'justificado': 'JUSTIFY',
     'arriba': 'OVERLINE',
     'abajo': 'UNDERLINE',
-    'centro': 'LINE_THROUGH',
+    'tachado': 'LINE_THROUGH',
     'simple': 'SOLID',
     'doble': 'DOUBLE',
     'puntos': 'DOTTED',

@@ -1,0 +1,3 @@
+id Elemento1 ()
+id Elemento2 ()
+id Elemento3 (CO:negro)

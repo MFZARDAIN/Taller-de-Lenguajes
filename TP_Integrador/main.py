@@ -11,7 +11,7 @@ parser.parse(contenido)
 with open(f'{sys.argv[1]}.css', 'w', encoding='utf-8') as archivo_out:
     for linea in css:
         if 'Error Sintáctico' in css:
-            archivo_out.write('/*Error Sintáctico*/')
+            archivo_out.write('/*Error Sintáctico*/' + '\n')
             print('Error Sintáctico')
         else:
             print(linea)

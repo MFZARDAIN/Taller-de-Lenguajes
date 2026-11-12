@@ -1,0 +1,2 @@
+clase contenedor(CO:rojo, BK:negro)
+NV(TA:centrado, TD:abajo)

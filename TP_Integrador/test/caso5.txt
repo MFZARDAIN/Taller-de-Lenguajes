@@ -1,0 +1,4 @@
+id Elemento1 (CO:azul)
+clase Elemento2 (CO:azul)
+clase Elemento3 (CO:azul)
+id Elemento4 (CO:azul)

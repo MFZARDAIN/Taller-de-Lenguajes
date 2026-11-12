@@ -1,0 +1,2 @@
+id Contenedor (CO:rojo, BK:blanco, BC:rojo, BS:doble, PD:10, MG:10)
+clase Elemento (TA:justificado, TD:abajo, TDC:verde, TDS:doble, FS:40)

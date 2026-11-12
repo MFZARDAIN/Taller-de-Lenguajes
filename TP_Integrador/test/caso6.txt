@@ -1,0 +1,8 @@
+BD (CO:gris)
+HD (CO:gris)
+NV (CO:gris)
+ST (CO:gris)
+AR (CO:gris)
+AS (CO:gris)
+FT (CO:gris)
+DV (CO:gris)

@@ -7,13 +7,13 @@ def generar_css(propiedad, valor):
             {
                 'role': 'user',
                 'content': f''' 
-                Devuelve únicamente codigo en formato CSS. 
+                Devuelve únicamente codigo en lenguaje CSS (Cascading Style Sheets). 
                 Sin explicaciones. 
                 Sin markdown. 
                 Sin texto adicional. 
                 Si es un valor númerico agregale la unidad de medida correspondiente a la propiedad.
                 Si es un color adaptalo a HEX.
-                Adapta al formato del lenguaje CSS la propiedad {propiedad} y el valor: {valor}.
+                Adapta al formato del lenguaje CSS la propiedad "{propiedad}" y el valor: "{valor}".
                 Coloca ';' al final.
                 '''
             }
