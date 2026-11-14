@@ -68,7 +68,7 @@ def test_caso2():
     assert actual.replace('\n', '').replace(' ', '').replace('\t', '') == esperado.replace('\n', '').replace(' ', '').replace('\t', '')
 
 def test_caso3():
-    'Prueba 3'
+    'Prueba 3 - Decorador de Texto'
     txt_file = Path("TP_Integrador/test/caso3.txt")
 
     resultado = subprocess.run(

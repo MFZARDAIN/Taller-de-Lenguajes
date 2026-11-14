@@ -46,7 +46,7 @@ def p_elemento_selector(t):
         'AR': 'article', 'AS': 'aside', 'FT': 'footer', 'DV': 'div'
     }
 
-    cod = selectores.get(t[1], t[1].lower())
+    cod = selectores.get(t[1], t[1])
     t[0] = f"{cod}{{\n{t[3]}\n}}"
 
 def p_elemento_texto(t):
@@ -203,6 +203,7 @@ def p_propiedad_tamaño_texto(t):
     pass
 
 def p_error(t):
+    css.clear()
     css.append('Error Sintáctico')
     pass
 
